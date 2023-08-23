@@ -60,7 +60,10 @@ export default function Home() {
           return <BubbleMessage key={message.id} message={message} />;
         })}
       </div>
+
+      {loading && <span className="loading loading-dots loading-md text-gray-500 mb-4"></span>}
       {/* Input */}
+
       <div className="w-full max-w-screen-sm">
         <form onSubmit={handleSubmit} className="flex gap-2">
           <input
